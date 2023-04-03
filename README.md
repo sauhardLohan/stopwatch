@@ -1,7 +1,7 @@
 # stopwatch
 stopwatch app
 
-#To show animation of stopwatch
+## To show animation of stopwatch
 For animation I have created a circular div with left side having white background color and right side having green background color
 and created two semi-circular divs named filler rotator with background color same as right side i.e green and hider-rotator with white background color
 the hider-rotator and filler-rotator both having position as absolute and positioned such that they coincide with the right side
