@@ -8,7 +8,8 @@ button{
 
 
 /* animations  */
-@keyframes rotate{
+/* animation to rotate filler-rotator */
+@keyframes rotate-filler{
     from{
         transform: rotate(0deg);
         z-index: 0;
@@ -26,6 +27,7 @@ button{
         transform: rotate(180deg);
     }
 }
+/* animation to rotate hider-rotator */
 @keyframes rotate-hider{
     from{
         transform: rotate(0deg);
@@ -39,7 +41,6 @@ button{
         transform: rotate(180deg);
     }
 }
-
 
 
 .half-circle{
@@ -61,12 +62,8 @@ button{
 
 #filler-rotater{
     border-radius: 0 150px 150px 0;
-    position: absolute;
     left: 50%;
     transform-origin: 0% 50%;
-}
-.filler-animation{
-    animation: rotate linear 60s infinite;
 }
 #hider-rotater{
     height: 200px;
@@ -75,9 +72,17 @@ button{
     left: 50%;
     transform-origin: 0% 50%;
 }
+
+/* classes to be added or removed to start and stop animation respectively for filler-rotator and hider-rotator */
+.filler-animation{
+    animation: rotate-filler linear 60s infinite;
+}
+
 .hider-animation{
     animation: rotate-hider linear 60s infinite;
 }
+
+/* inner div containing the numbers for minute and seconds counter  */
 #inner{
     width: 80%;
     height: 80%;

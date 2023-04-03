@@ -10,14 +10,24 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- stopwatch container  -->
     <div class="border border-secondary rounded mt-5 w-50 m-auto p-5">
+        <!-- div for counter and animation  -->
+        <!-- for animation I have created a circular div with left side having white background color
+        and right side having green background color now created two semi-circular divs named filler rotator with background color same as right side i.e green and hider-rotator with white background color
+        the hider-rotator and filler-rotator both having position as absolute and positioned such that they coincide with the right side
+        now when the timer starts hider-rotator starts rotating and hence the green background of filler-rotator starts showing with every second
+        after 30 second pass and hider-rotator has rotated 180 degrees the filler-rotator starts rotating with it's z-index increased so that it is visible
+        hence after 30 seconds the green background of right side and the filler rotator gives the effect of the green color incresing and after another 30seconds the filler-rotator rotates 180degrees
+        and this animation continues on going until stop or reset button is clicked-->
         <div id="outer" class="rounded-circle bg-body-secondary m-auto d-flex position-relative">
             <div id="left" class="half-circle bg-white"></div>
             <div id="right" class="half-circle bg-success"></div>
-            <div id="filler-rotater" class="half-circle bg-success"></div>
+            <div id="filler-rotater" class="half-circle bg-success position-absolute"></div>
             <div id="hider-rotater" class="half-circle bg-white position-absolute"></div>
             <div id="inner" class="bg-secondary d-flex position-absolute align-items-center justify-content-center rounded-circle" ><h1><span id="min">00</span>:<span id="sec">00</span></h1></div>
-        </div>
+        </div> 
+        <!-- div for controls with buttons to start,stop, and reset counter  -->
         <div class="mt-5 d-flex justify-content-between">
             <button id="start" class="p-1 display-6 rounded ">Start</button>
             <button id="stop" class="p-1 display-6 rounded">Stop</button>
