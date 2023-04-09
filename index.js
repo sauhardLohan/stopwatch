@@ -101,7 +101,7 @@
         else if(target.id=='reset'){
             // enabling the start button after timer reseted 
             start.disabled=false;
-            // on clicking of reset button reseting timer 
+            // on clicking of reset button reseting  timer 
             resetTimer();
         }
     }
