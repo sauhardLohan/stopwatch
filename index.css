@@ -1,97 +1,99 @@
-body{
-    background-color: rgb(243, 231, 205);
+body {
+  background-color: rgb(243, 231, 205);
 }
-button{
-    width: 110px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+button {
+  width: 110px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
-
 
 /* animations  */
+/* When the timer starts hider-rotator starts rotating and hence the green background of filler-rotator starts showing with every second
+and after 30 seconds pass the hider-rotator has rotated 180 degrees the filler-rotator starts rotating with it's z-index increased so that it is visible
+hence after the first 30 seconds the green background of right side and the filler rotator combined gives the effect of the green color incresing and after another 30 seconds the filler-rotator rotates 180degrees
+and this animation continues on going until stop or reset button is clicked */
 /* animation to rotate filler-rotator */
-@keyframes rotate-filler{
-    from{
-        transform: rotate(0deg);
-        z-index: 0;
-    }
-    49.9999%{
-        transform: rotate(0deg);
-        z-index: 0;
-    }
-    50%{
-        transform: rotate(0deg);
-        z-index: 4;
-    }
-    to{
-        z-index: 4;
-        transform: rotate(180deg);
-    }
+@keyframes rotate-filler {
+  from {
+    transform: rotate(0deg);
+    z-index: 0;
+  }
+  49.9999% {
+    transform: rotate(0deg);
+    z-index: 0;
+  }
+  50% {
+    transform: rotate(0deg);
+    z-index: 4;
+  }
+  to {
+    z-index: 4;
+    transform: rotate(180deg);
+  }
 }
 /* animation to rotate hider-rotator */
-@keyframes rotate-hider{
-    from{
-        transform: rotate(0deg);
-    }
+@keyframes rotate-hider {
+  from {
+    transform: rotate(0deg);
+  }
 
-    50%{
-        transform: rotate(180deg);
-    }
+  50% {
+    transform: rotate(180deg);
+  }
 
-    to{
-        transform: rotate(180deg);
-    }
+  to {
+    transform: rotate(180deg);
+  }
 }
 
-
-.half-circle{
-    height: 200px;
-    width: 100px;
+.half-circle {
+  height: 200px;
+  width: 100px;
 }
 
-#outer{
-    width: 200px;
-    height: 200px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+#outer {
+  width: 200px;
+  height: 200px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
-#left{
-    border-radius: 150px 0 0 150px;
+#left {
+  border-radius: 150px 0 0 150px;
 }
-#right{
-    border-radius: 0 150px 150px 0;
+#right {
+  border-radius: 0 150px 150px 0;
 }
 
-#filler-rotater{
-    border-radius: 0 150px 150px 0;
-    left: 50%;
-    transform-origin: 0% 50%;
+#filler-rotater {
+  border-radius: 0 150px 150px 0;
+  left: 50%;
+  transform-origin: 0% 50%;
 }
-#hider-rotater{
-    height: 200px;
-    width: 100px;
-    border-radius: 0 150px 150px 0;
-    left: 50%;
-    transform-origin: 0% 50%;
+#hider-rotater {
+  height: 200px;
+  width: 100px;
+  border-radius: 0 150px 150px 0;
+  left: 50%;
+  transform-origin: 0% 50%;
 }
 
 /* classes to be added or removed to start and stop animation respectively for filler-rotator and hider-rotator */
-.filler-animation{
-    animation: rotate-filler linear 60s infinite;
+.filler-animation {
+  animation: rotate-filler linear 60s infinite;
 }
 
-.hider-animation{
-    animation: rotate-hider linear 60s infinite;
+.hider-animation {
+  animation: rotate-hider linear 60s infinite;
 }
 
 /* inner div containing the numbers for minute and seconds counter  */
-#inner{
-    width: 80%;
-    height: 80%;
-    top: 10%;
-    left: 10%;
-    z-index: 100;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+#inner {
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  z-index: 100;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-
-
-
-
